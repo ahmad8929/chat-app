@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
-
+const mongoose = require("mongoose");
 const cors = require("cors");
 const socketIO = require("socket.io");
 const http = require("http");
 const { Socket } = require("dgram");
+
+const connectMongo = require("./mongodb/connect");
 
 const port = 4500 || process.env.PORT;
 
@@ -13,7 +15,11 @@ const users = [{}];
 const server = http.createServer(app);
 const io = socketIO(server);
 
+app.use(express.json());
 app.use(cors());
+
+// db
+connectMongo();
 
 io.on("connection", (socket) => {      // on means here data receive karna
     console.log("New Connection establish");
