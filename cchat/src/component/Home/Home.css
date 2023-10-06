@@ -1,0 +1,40 @@
+/* YourComponentName.css */
+
+.container {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    /* background-color: rgb(251, 249, 249); */
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    /* margin-top: 15px; */
+    padding: 8px;
+  }
+  
+  .text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+  }
+  
+.text h1{
+  font-size: 60px;
+  padding: 50px;
+  color: red;
+}
+.text p{
+  font-size: 25px;
+}
+
+.image {
+    flex: 1;
+    height: 39vw;
+  }
+  
